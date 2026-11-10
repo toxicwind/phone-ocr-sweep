@@ -1,0 +1,28 @@
+{
+  "name": "phone-ocr-sweep",
+  "version": "0.1.0",
+  "description": "Idempotent OCR sweep over adb-pulled phone screenshots with flock-based concurrency control and timeout guards.",
+  "main": "run-ocr.ts",
+  "type": "module",
+  "bin": {
+    "phone-ocr-sweep": "./run-ocr.ts",
+    "ocr-one": "./ocr-one.ts",
+    "collect-hits": "./collect-hits.ts"
+  },
+  "scripts": {
+    "dev": "bun --hot run run-ocr.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "biome check .",
+    "fmt": "biome format . --write",
+    "build": "bun build *.ts --outdir ./dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/bun": "^1.1.0",
+    "bun-types": "^1.1.0",
+    "typescript": "^5.4.0",
+    "@biomejs/biome": "^1.8.0"
+  },
+  "private": true
+}
